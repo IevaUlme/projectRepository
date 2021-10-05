@@ -1,6 +1,10 @@
 import pygame as pg,sys
 from pygame.locals import *
 import time
+import configparser
+
+config = configparser.ConfigParser()
+config.read("config.ini")
 
 #initialize global variables
 XO = 'x'
@@ -16,7 +20,7 @@ TTT = [[None]*3,[None]*3,[None]*3]
 
 #initializing pygame window
 pg.init()
-fps = 30
+fps = int(config["Game_settings"]["fps"])
 CLOCK = pg.time.Clock()
 screen = pg.display.set_mode((width, height+100),0,32)
 pg.display.set_caption("Tic Tac Toe")
@@ -170,7 +174,7 @@ def userClick():
 
 def reset_game():
     global TTT, winner,XO, draw
-    time.sleep(3)
+    time.sleep(int(config["Game_settings"]["time_between_games"]))
     XO = 'x'
     draw = False
     game_opening()
