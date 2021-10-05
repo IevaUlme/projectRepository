@@ -2,6 +2,9 @@ import pygame as pg,sys
 from pygame.locals import *
 import time
 import configparser
+import logging
+
+logging.basicConfig(filename='tictactoe_log.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -58,8 +61,10 @@ def draw_status():
         message = XO.upper() + "'s Turn"
     else:
         message = winner.upper() + " won!"
+        logging.info(winner)
     if draw:
         message = 'Game Draw!'
+        logging.info("draw")
 
     font = pg.font.Font(None, 30)
     text = font.render(message, 1, (255, 255, 255))
