@@ -1,0 +1,47 @@
+2021-11-23 12:49:42,233 - INFO - migrate_db : TicTacToe games DB migration service
+2021-11-23 12:49:42,233 - INFO - migrate_db : Loading configuration from file
+2021-11-23 12:49:42,241 - ERROR - migrate_db : 
+Traceback (most recent call last):
+  File "D:\Programming\Python\tictactoe\migrate_db.py", line 30, in <module>
+    mysql_config_mysql_host = config['DataBase']['host']
+  File "C:\Users\ievaa\AppData\Local\Programs\Python\Python39\lib\configparser.py", line 963, in __getitem__
+    raise KeyError(key)
+KeyError: 'DataBase'
+2021-11-23 12:49:42,243 - INFO - migrate_db : DONE
+2021-11-23 12:50:37,011 - INFO - migrate_db : TicTacToe games DB migration service
+2021-11-23 12:50:37,011 - INFO - migrate_db : Loading configuration from file
+2021-11-23 12:50:37,011 - INFO - migrate_db : DONE
+2021-11-23 12:50:37,028 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 12:50:37,028 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.6.5-MariaDB
+2021-11-23 12:50:37,059 - INFO - migrate_db : Executing: 20210924203000-initial-db-struct.sql
+2021-11-23 12:50:37,064 - INFO - migrate_db : None
+2021-11-23 12:50:37,064 - INFO - migrate_db : OK
+2021-11-23 12:51:15,700 - INFO - migrate_db : TicTacToe games DB migration service
+2021-11-23 12:51:15,700 - INFO - migrate_db : Loading configuration from file
+2021-11-23 12:51:15,700 - INFO - migrate_db : DONE
+2021-11-23 12:51:15,700 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 12:51:15,700 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.6.5-MariaDB
+2021-11-23 12:51:15,716 - INFO - migrate_db : Migrations table exists
+2021-11-23 12:51:15,716 - INFO - migrate_db : No migrations to execute
+2021-11-23 13:26:29,916 - INFO - migrate_db : TicTacToe games DB migration service
+2021-11-23 13:26:29,916 - INFO - migrate_db : Loading configuration from file
+2021-11-23 13:26:29,916 - INFO - migrate_db : DONE
+2021-11-23 13:26:29,916 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 13:26:29,916 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.6.5-MariaDB
+2021-11-23 13:26:29,916 - INFO - migrate_db : Migrations table exists
+2021-11-23 13:26:29,931 - INFO - migrate_db : No migrations to execute
+2021-11-23 13:27:08,090 - INFO - migrate_db : TicTacToe games DB migration service
+2021-11-23 13:27:08,090 - INFO - migrate_db : Loading configuration from file
+2021-11-23 13:27:08,090 - INFO - migrate_db : DONE
+2021-11-23 13:27:08,105 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 13:27:08,105 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.6.5-MariaDB
+2021-11-23 13:27:08,105 - INFO - migrate_db : Migrations table exists
+2021-11-23 13:27:08,105 - INFO - migrate_db : No migrations to execute
+2021-11-23 13:27:44,061 - INFO - migrate_db : TicTacToe games DB migration service
+2021-11-23 13:27:44,061 - INFO - migrate_db : Loading configuration from file
+2021-11-23 13:27:44,061 - INFO - migrate_db : DONE
+2021-11-23 13:27:44,079 - INFO - migrate_db : Connecting to MySQL DB
+2021-11-23 13:27:44,079 - INFO - migrate_db : Connected to MySQL database. MySQL Server version on 5.5.5-10.6.5-MariaDB
+2021-11-23 13:27:44,100 - INFO - migrate_db : Executing: 20210924203000-initial-db-struct.sql
+2021-11-23 13:27:44,115 - INFO - migrate_db : None
+2021-11-23 13:27:44,121 - INFO - migrate_db : OK

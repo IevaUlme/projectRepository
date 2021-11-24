@@ -3,11 +3,23 @@ from pygame.locals import *
 import time
 import configparser
 import logging
+import mysql.connector
 
-logging.basicConfig(filename='tictactoe_log.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
+logging.basicConfig(filename='log/tictactoe_log.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 config = configparser.ConfigParser()
 config.read("config.ini")
+
+# Database setup
+mysql_config_mysql_host = config['DATABASE']['host']
+mysql_config_mysql_db = config['DATABASE']['db']
+mysql_config_mysql_user = config['DATABASE']['user']
+mysql_config_mysql_pass = config['DATABASE']['password']
+
+connection = mysql.connector.connect(host=mysql_config_mysql_host, database=mysql_config_mysql_db,user=mysql_config_mysql_user, password=mysql_config_mysql_pass)
+mycursor = connection.cursor()
+
+
 
 #initialize global variables
 XO = 'x'
@@ -61,9 +73,13 @@ def draw_status():
         message = XO.upper() + "'s Turn"
     else:
         message = winner.upper() + " won!"
+        mycursor.execute("INSERT INTO results (winner) VALUES ('" + str(winner.upper()) + "')")
+        connection.commit()
         logging.info(winner)
     if draw:
         message = 'Game Draw!'
+        mycursor.execute("INSERT INTO results (winner) VALUES ('" + str("Draw") + "')")
+        connection.commit()
         logging.info("draw")
 
     font = pg.font.Font(None, 30)
